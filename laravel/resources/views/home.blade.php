@@ -17,7 +17,7 @@
 
                     @foreach($users as $user)
                     <div class="card">
-                        {{ $user->name }}          
+                        <a href="">{{ $user->name }}</a>
                     </div>
                     @endforeach
                 </div>
