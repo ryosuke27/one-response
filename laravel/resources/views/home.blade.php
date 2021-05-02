@@ -17,7 +17,7 @@
 
                     @foreach($users as $user)
                     <div class="card">
-                        <a href="">{{ $user->name }}</a>
+                        <a href="{{ route('message.index') }}">{{ $user->name }}</a>
                     </div>
                     @endforeach
                 </div>
