@@ -3,10 +3,8 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Str;
 
-class PostSeeder extends Seeder
+class MessageSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,8 +13,6 @@ class PostSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert([
-            'text' => Str::random(10),
-        ]);
+        //
     }
 }

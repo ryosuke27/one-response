@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\User;
+use App\Models\Message;
 
-class HomeController extends Controller
+class MessageController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -25,9 +25,9 @@ class HomeController extends Controller
     public function index()
     {
 
-        $users = User::all();
+        $messages = Message::all();
 
 
-        return view('home')->with('users', $users);
+        return view('message')->with('messages', $messages);
     }
 }

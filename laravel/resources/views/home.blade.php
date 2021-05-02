@@ -15,7 +15,11 @@
                         </div>
                     @endif
 
-
+                    @foreach($users as $user)
+                    <div class="card">
+                        <a href="{{ route('message.index') }}">{{ $user->name }}</a>
+                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
