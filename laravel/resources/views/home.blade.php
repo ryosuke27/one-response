@@ -15,7 +15,11 @@
                         </div>
                     @endif
 
-
+                    @foreach($users as $user)
+                    <div class="card">
+                        {{ $user->name }}          
+                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
