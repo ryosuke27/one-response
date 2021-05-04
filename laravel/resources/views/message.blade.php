@@ -8,16 +8,13 @@
                 <div class="card-header">{{ __('Message') }}</div>
 
                 
-                <div class="card-body">
-                    @foreach($messages as $message)
-                    <div class="card-title">
-                        <h3>messages</h3>
-                    </div>
+                @foreach($messages as $message)
+                  <div class="card mt-2 ml-2 mr-2 mb-2">
                     <div class="card-text">
                         <a href="">{{ $message->text }}</a>
                     </div>
-                    @endforeach
-                </div>
+                  </div>
+                @endforeach
             </div>
         </div>
     </div>

@@ -15,6 +15,7 @@ class CreateMessagesTable extends Migration
     {
         Schema::create('messages', function (Blueprint $table) {
             $table->id();
+            $table->integer('message_id');
             $table->string('text');
             $table->timestamps();
         });
@@ -25,7 +26,7 @@ class CreateMessagesTable extends Migration
      *
      * @return void
      */
-    public function down()
+    public function down()   
     {
         Schema::dropIfExists('messages');
     }
