@@ -18,7 +18,7 @@ class MessageTableSeeder extends Seeder
         DB::table('messages')->insert(
             [
             'text' => Str::random(10),
-            'message_id' => 1,
+            'user_id' => 1,
             ],
         );
     }

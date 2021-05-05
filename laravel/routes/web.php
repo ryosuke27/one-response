@@ -20,4 +20,4 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/message/{id?}/show', [App\Http\Controllers\MessageController::class, 'show'])->name('message.index');
+Route::get('/message/{user_id?}/show', [App\Http\Controllers\MessageController::class, 'show'])->name('message.index');
