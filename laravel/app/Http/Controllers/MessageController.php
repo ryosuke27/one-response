@@ -22,11 +22,10 @@ class MessageController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function show($user_id)
     {
 
-        $messages = Message::all();
-
+        $messages = Message::where('user_id', $user_id)->get();
 
         return view('message')->with('messages', $messages);
     }

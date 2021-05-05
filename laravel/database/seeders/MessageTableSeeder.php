@@ -4,10 +4,9 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 
-class UserTableSeeder extends Seeder
+class MessageTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,12 +15,11 @@ class UserTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert(
+        DB::table('messages')->insert(
             [
-            'name' => 'test',
-            'email' => 'test@gmail.com',
-            'password' => 'password',
+            'text' => Str::random(10),
+            'user_id' => 1,
             ],
-    );
+        );
     }
 }
