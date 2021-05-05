@@ -5,13 +5,13 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Message') }}</div>
+                <div class="card-header">{{ __('Feed') }}</div>
 
                 
-                @foreach($messages as $message)
+                @foreach($feeds as $feed)
                   <div class="card mt-2 ml-2 mr-2 mb-2">
                     <div class="card-text">
-                        <a href="">{{ $message->text }}</a>
+                        <a href="">{{ $feed->text }}</a>
                     </div>
                   </div>
                 @endforeach

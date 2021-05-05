@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\User;
+use App\Models\Feed;
 
 class HomeController extends Controller
 {
@@ -25,9 +25,8 @@ class HomeController extends Controller
     public function index()
     {
 
-        $users = User::all();
-
-
-        return view('home')->with('users', $users);
+        $feeds = Feed::all();
+        
+        return view('home')->with('feeds', $feeds);
     }
 }
