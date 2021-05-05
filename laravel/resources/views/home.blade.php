@@ -10,8 +10,11 @@
                 
                 <div class="card-body">
                     @foreach($feeds as $feed)
-                    <div class="card">
-                        <a href="">{{ $feed->text }}</a>
+                    <div class="card mt-2">
+                        <div class="card-body">
+                            <p class="card-text">{{ $feed->text }}</p>
+                            <button type="button" class="btn btn-info">Archive</button>
+                        </div>
                     </div>
                     @endforeach
                 </div>

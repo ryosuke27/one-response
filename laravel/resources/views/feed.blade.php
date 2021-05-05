@@ -7,13 +7,16 @@
             <div class="card">
                 <div class="card-header">{{ __('Feed') }}</div>
 
-                
+
                 @foreach($feeds as $feed)
-                  <div class="card mt-2 ml-2 mr-2 mb-2">
-                    <div class="card-text">
-                        <a href="">{{ $feed->text }}</a>
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Feed</h5>
+                        <p class="card-text">{{ $feed->text }}</p>
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
                     </div>
-                  </div>
+                </div>
                 @endforeach
             </div>
         </div>
