@@ -5,9 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Feed;
 
-class HomeController extends Controller
+class FeedController extends Controller
 {
-    /**
+      /**
      * Create a new controller instance.
      *
      * @return void
@@ -25,8 +25,9 @@ class HomeController extends Controller
     public function index()
     {
 
-        $feeds = Feed::all();
-        
-        return view('home')->with('feeds', $feeds);
+        $users = Feed::all();
+
+
+        return view('home')->with('users', $users);
     }
 }
