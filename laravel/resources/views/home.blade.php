@@ -12,7 +12,7 @@
                     @foreach($feeds as $feed)
                     <div class="card mt-2">
                         <div class="card-body">
-                            <p class="card-text">{{ $feed->text }}</p>
+                            <h6 class="card-text">{{ $feed->text }}</h6>
                             <button type="button" class="btn btn-info">Archive</button>
                         </div>
                     </div>
