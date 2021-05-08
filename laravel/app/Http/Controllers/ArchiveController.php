@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Archive;
+use App\Models\Feed;
 use Illuminate\Http\Request;
 
 class ArchiveController extends Controller
@@ -29,5 +30,12 @@ class ArchiveController extends Controller
 
 
         return view('archive')->with('archives', $archives);
+    }
+
+    public function update(Request $request)
+    {
+        $feed = Feed::find($request->id)
+                    ->update(['archive_flg' => 1]);
+        
     }
 }

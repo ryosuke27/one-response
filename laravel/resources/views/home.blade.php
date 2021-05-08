@@ -7,15 +7,16 @@
             <div class="card">
                 <div class="card-header">{{ __('Feed') }}<a href="{{ route('archive') }}">{{ __('Archive') }}</a></div>
 
-               @form 
                 <div class="card-body">
                     @foreach($feeds as $feed)
+                    {{ Form::open(['route' => ['archive.update', ['id' => $feed->id]]]) }}
                     <div class="card mt-2">
                         <div class="card-body">
                             <h6 class="card-text">{{ $feed->text }}</h6>
-                            <button type="button" class="btn btn-info">Archive</button>
+                            <button type="submit" class="btn btn-info">Archive</button>
                         </div>
                     </div>
+                    {{ Form::close() }}
                     @endforeach
                 </div>
             </div>
