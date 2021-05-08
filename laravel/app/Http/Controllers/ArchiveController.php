@@ -26,10 +26,10 @@ class ArchiveController extends Controller
     public function index()
     {
 
-        $archives = Archive::all();
+        $feeds = Feed::where('archive_flg', 1)->get();
 
 
-        return view('archive')->with('archives', $archives);
+        return view('archive')->with('feeds', $feeds);
     }
 
     public function update(Request $request)
