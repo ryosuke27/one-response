@@ -37,5 +37,6 @@ class ArchiveController extends Controller
         $feed = Feed::find($request->id)
                     ->update(['archive_flg' => 1]);
         
+        return redirect()->route('home');
     }
 }
