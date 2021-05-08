@@ -25,7 +25,7 @@ class HomeController extends Controller
     public function index()
     {
 
-        $feeds = Feed::all();
+        $feeds = Feed::where('archive_flg', 0)->get();
         
         return view('home')->with('feeds', $feeds);
     }

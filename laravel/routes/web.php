@@ -20,4 +20,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/archive', [App\Http\Controllers\ArchiveController::class, 'index'])->name('archive');
+Route::post('/archive', [App\Http\Controllers\ArchiveController::class, 'update'])->name('archive.update');
 Route::get('/message/{user_id?}/show', [App\Http\Controllers\MessageController::class, 'show'])->name('message.index');
