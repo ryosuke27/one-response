@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header">{{ __('Feed') }}<a href="{{ route('archive') }}">{{ __('Archive') }}</a></div>
 
-                
+               @form 
                 <div class="card-body">
                     @foreach($feeds as $feed)
                     <div class="card mt-2">
