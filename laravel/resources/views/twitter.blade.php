@@ -6,7 +6,7 @@
     <div class="container mb-4">
         <h4>ツイート</h4>
         {{ Form::open(['route' => ['twitter']]) }}
-            <textarea rows="3" cols="100" name="tweet"></textarea>
+            <textarea name="tweet"></textarea>
             <input type="submit" value="Tweet" />
         {{ Form::close() }}
     </div>
