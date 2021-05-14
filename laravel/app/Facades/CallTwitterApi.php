@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Facades;
+namespace App\Facades;
 
 use Illuminate\Http\Request;
 use Abraham\TwitterOAuth\TwitterOAuth;
@@ -24,7 +24,7 @@ class callTwitterApi
     {
         $d = $this->t->get("search/tweets", [
             'q' => $searchWord,
-            'count' => 3,
+            'count' => 10,
          ]);
          
         return $d->statuses;
