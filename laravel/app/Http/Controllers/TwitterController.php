@@ -26,8 +26,8 @@ class TwitterController extends Controller
     public function search(Request $request)
     {
         $t = new CallTwitterApi();
-        $d = $t->serachTweets($request->tweet);
+        $d = $t->serachTweets($request->search);
     
-        return view('twitter', ['twitter' => $d]);        
+        return view('twitter', ['result' => $d]);        
     }
 }
