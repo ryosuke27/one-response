@@ -25,4 +25,4 @@ Route::post('/archive', [App\Http\Controllers\ArchiveController::class, 'update'
 Route::get('/message/{user_id?}/show', [App\Http\Controllers\MessageController::class, 'show'])->name('message.index');
 
 Route::get('twitter', [App\Http\Controllers\TwitterController::class, 'index']);
-Route::post('twitter', [App\Http\Controllers\TwitterController::class, 'tweet'])->name('twitter');
+Route::post('twitter', [App\Http\Controllers\TwitterController::class, 'search'])->name('search');

@@ -5,8 +5,8 @@
 <div class="container">
     <div class="container mb-4">
         <h4>ツイート</h4>
-        {{ Form::open(['route' => ['twitter']]) }}
-            <textarea name="tweet"></textarea>
+        {{ Form::open(['route' => ['search']]) }}
+            <textarea name="search"></textarea>
             <input type="submit" value="Tweet" />
         {{ Form::close() }}
     </div>
